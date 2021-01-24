@@ -8,6 +8,15 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.sda.wapp.backend.HibernateUtils;
+import com.sda.wapp.backend.Location;
+import com.sda.wapp.backend.LocationController;
+import com.sda.wapp.backend.LocationRepository;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
@@ -75,8 +84,12 @@ public class HeadMenuNavigation {
 
 
 
-    static void displayUserLocations() {
-        //database merch coming soon.
+
+
+    static void displayUserLocations() throws SQLException {
+        LocationRepository.queryOne();
+        //There may be more of custom query this is a reason code is not implemented in this place.
+
     }
 
     static void downloadCurrentData() {

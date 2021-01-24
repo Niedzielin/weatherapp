@@ -7,13 +7,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 /**
  * Created by Hyperbook on 24.01.2021
  **/
 public class UserInterface {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Scanner scanner = new Scanner(System.in);
 
