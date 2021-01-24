@@ -14,17 +14,18 @@ import java.util.Scanner;
  * Created by Hyperbook on 24.01.2021
  **/
 public class HeadMenuNavigation {
+    static Location location;
 
-
-    static void addNewLocation() {
-
+    public static void addNewLocation() {
         Scanner scanner = new Scanner(System.in);
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String city="",longitude="",latitude="",region="",country="";
 
         while (true) {
-            SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-            Session session = sessionFactory.openSession();
-            Transaction transaction = session.beginTransaction();
-            String city="",longitude="",latitude="",region="",country="";
+
+
             System.out.println("Please insert Location data");
             System.out.println("1.City");
             System.out.println("2.Longitude");
@@ -61,7 +62,7 @@ public class HeadMenuNavigation {
                     LocationController.validateCountry(country);
                     break;
                 case "6":
-                    Location location = new Location(city,longitude,latitude,region,country);
+                    location = new Location(city,longitude,latitude,region,country);
                     session.persist(location);
                     transaction.commit();
                     session.close();

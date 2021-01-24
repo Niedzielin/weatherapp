@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  **/
 public class LocationController {
     public static boolean validateCity(String city) {
-        String regex ="";
+        String regex ="^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*$";
         Pattern p = Pattern.compile(regex);
         if (city==null|| StringUtils.isNullOrEmpty(city)){
             return false;
@@ -19,7 +19,7 @@ public class LocationController {
         return m.matches();
     }
     public static boolean validateLongitude(String longitude) {
-        String regex ="";
+        String regex ="^-?([1]?[1-7][1-9]|[1]?[1-8][0]|[1-9]?[0-9])\\.{1}\\d{1,6}";
         Pattern p = Pattern.compile(regex);
         if (longitude==null||StringUtils.isNullOrEmpty(longitude)){
             return false;
@@ -28,7 +28,7 @@ public class LocationController {
         return m.matches();
     }
     public static boolean validateLatitude(String latitude) {
-        String regex ="";
+        String regex ="^-?([1-8]?[1-9]|[1-9]0)\\.{1}\\d{1,6}";
         Pattern p = Pattern.compile(regex);
         if (latitude==null||StringUtils.isNullOrEmpty(latitude)){
             return false;
@@ -37,7 +37,7 @@ public class LocationController {
         return m.matches();
     }
     public static boolean validateRegion(String region) {
-        String regex ="";
+        String regex ="^[a-zA-Z]+(?:[\\s-][a-zA-Z]+)*$";
         Pattern p = Pattern.compile(regex);
         if (region==null||StringUtils.isNullOrEmpty(region)){
             return false;
@@ -46,7 +46,7 @@ public class LocationController {
         return m.matches();
     }
     public static boolean validateCountry(String country) {
-        String regex ="";
+        String regex ="[a-zA-Z]{2,}";
         Pattern p = Pattern.compile(regex);
         if (country==null||StringUtils.isNullOrEmpty(country)){
             return false;

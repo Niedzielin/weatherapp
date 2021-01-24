@@ -1,5 +1,4 @@
 package com.sda.wapp.backend;
-
 import javax.persistence.*;
 
 /**

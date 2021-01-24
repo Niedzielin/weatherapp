@@ -1,6 +1,12 @@
 package com.sda.wapp.frontend;
 // done package into a frontend
 
+import com.sda.wapp.backend.HibernateUtils;
+import com.sda.wapp.backend.Location;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
 import java.util.Scanner;
 
 /**
@@ -36,7 +42,8 @@ public class UserInterface {
                     break;
                 case 4:
                     System.out.println("Thank you for using our App. See you soon!");
-                    break;
+
+                    return;
             }
         }
 
