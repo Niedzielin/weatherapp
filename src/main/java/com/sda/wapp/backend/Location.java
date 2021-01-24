@@ -26,8 +26,7 @@ public class Location {
 
     }
 
-    public Location(Long id, String city, String longitude, String latitude, String region, String country) {
-        this.id = id;
+    public Location(String city, String longitude, String latitude, String region, String country) {
         this.city = city;
         this.longitude = longitude;
         this.latitude = latitude;

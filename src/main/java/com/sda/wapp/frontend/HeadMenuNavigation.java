@@ -23,7 +23,7 @@ public class HeadMenuNavigation {
             SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
-            String city,longitude,latitude,region,country;
+            String city="",longitude="",latitude="",region="",country="";
             System.out.println("Please insert Location data");
             System.out.println("1.City");
             System.out.println("2.Longitude");
@@ -36,7 +36,7 @@ public class HeadMenuNavigation {
             switch (locationNavigation) {
                 case "1":
                     System.out.println("City:");
-                    location(city)  = scanner.next();
+                    city  = scanner.next();
                     break;
                 case "2":
                     System.out.println("Longitude");
