@@ -18,7 +18,7 @@ public class HeadMenuNavigation {
     static void addNewLocation() {
 
         Scanner scanner = new Scanner(System.in);
-        Location location = new Location(city,longitude,latitude,region,country);
+
         while (true) {
             SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
             Session session = sessionFactory.openSession();
@@ -55,7 +55,7 @@ public class HeadMenuNavigation {
                     country = scanner.next();
                     break;
                 case "6":
-
+                    Location location = new Location(city,longitude,latitude,region,country);
                     session.persist(location);
                     transaction.commit();
                     session.close();
