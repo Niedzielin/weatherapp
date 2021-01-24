@@ -1,6 +1,13 @@
 package com.sda.wapp.frontend;
 // done package into a frontend
 
+import com.sda.wapp.backend.HibernateUtils;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Scanner;
 
 /**
@@ -8,7 +15,9 @@ import java.util.Scanner;
  **/
 public class UserInterface {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
+
 
         System.out.println("Welcome in our Weather app, Functionalities are on the way.");
 
@@ -21,7 +30,7 @@ public class UserInterface {
             int headNavigation = scanner.nextInt();
             switch (headNavigation) {
                 case 1:
-                    System.out.println();
+                    System.out.println("Transfering to Location add menu...");
                     HeadMenuNavigation.addNewLocation();
                     break;
                 case 2:
@@ -33,9 +42,10 @@ public class UserInterface {
                     HeadMenuNavigation.downloadCurrentData();
                     break;
                 case 4:
-                    System.out.println();
-                    return;
+                    System.out.println("Thank you for using our App. See you soon!");
+                    break;
             }
         }
+
     }
 }
