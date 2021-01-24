@@ -4,7 +4,7 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/weatherapp?serverTimezone=Europe/Warsaw</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">ooooooo</property>
+        <property name="connection.password">00000000</property>
         <property name="hbm2ddl.auto">none</property>
         <property name="show_sql">true</property>
         <property name="format_sql">false</property>

@@ -3,6 +3,7 @@ package com.sda.wapp.frontend; // done ConsoleUserInterface is unnecessary
 
 import com.sda.wapp.backend.HibernateUtils;
 import com.sda.wapp.backend.Location;
+import com.sda.wapp.backend.LocationController;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -37,22 +38,27 @@ public class HeadMenuNavigation {
                 case "1":
                     System.out.println("City:");
                     city  = scanner.next();
+                    LocationController.validateCity(city);
                     break;
                 case "2":
                     System.out.println("Longitude");
                     longitude = scanner.next();
+                    LocationController.validateLongitude(longitude);
                     break;
                 case "3":
                     System.out.println("Latitude");
                     latitude = scanner.next();
+                    LocationController.validateLatitude(latitude);
                     break;
                 case "4":
                     System.out.println("Region");
                     region = scanner.next();
+                    LocationController.validateRegion(region);
                     break;
                 case "5":
                     System.out.println("Country");
                     country = scanner.next();
+                    LocationController.validateCountry(country);
                     break;
                 case "6":
                     Location location = new Location(city,longitude,latitude,region,country);
@@ -65,6 +71,8 @@ public class HeadMenuNavigation {
 
         }
     }
+
+
 
     static void displayUserLocations() {
         //database merch coming soon.

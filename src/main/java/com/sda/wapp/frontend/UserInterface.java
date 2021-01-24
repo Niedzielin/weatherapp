@@ -1,13 +1,6 @@
 package com.sda.wapp.frontend;
 // done package into a frontend
 
-import com.sda.wapp.backend.HibernateUtils;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.Scanner;
 
 /**
