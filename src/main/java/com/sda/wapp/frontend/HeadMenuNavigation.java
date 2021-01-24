@@ -1,5 +1,5 @@
-package com.sda.wapp.ConsoleUserInterface; // todo ConsoleUserInterface is unnecessary
-// todo package into a frontend
+package com.sda.wapp.frontend; // done ConsoleUserInterface is unnecessary
+// done package into a frontend
 
 import java.util.Scanner;
 
@@ -8,20 +8,19 @@ import java.util.Scanner;
  **/
 public class HeadMenuNavigation {
 
-    private static String city, longitude, latitude, region, country; // todo move to the method scope
 
     static void addNewLocation() {
+        String city, longitude, latitude, region, country; // done move to the method scope
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please insert Location data");
-        System.out.println("1.City");
-        System.out.println("2.Longitude");
-        System.out.println("3.Latitude");
-        System.out.println("4.Region");
-        System.out.println("5.Country");
-        System.out.println("6.Exit");
-
         while (true) {
+            System.out.println("Please insert Location data");
+            System.out.println("1.City");
+            System.out.println("2.Longitude");
+            System.out.println("3.Latitude");
+            System.out.println("4.Region");
+            System.out.println("5.Country");
+            System.out.println("6.Exit");
             String cityNavigation = scanner.next();
             switch (cityNavigation) {
                 case "1":

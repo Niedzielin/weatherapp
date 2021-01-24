@@ -1,5 +1,5 @@
-package com.sda.wapp.ConsoleUserInterface;
-// todo package into a frontend
+package com.sda.wapp.frontend;
+// done package into a frontend
 
 import java.util.Scanner;
 
